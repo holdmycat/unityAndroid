@@ -6290,3 +6290,6 @@ unity/Temp/StagingArea/symbols/armeabi-v7a/libunity.sym.so
 unity/Temp/StagingArea/symbols/x86/libil2cpp.so.debug
 unity/Temp/StagingArea/symbols/x86/libil2cpp.sym
 unity/Temp/StagingArea/symbols/x86/libunity.sym.so
+unity/Library/expandedItems
+unity/Library/LastSceneManagerSetup.txt
+unity/Library/ProjectSettings.asset
