@@ -1,2 +1,0 @@
-rm -rf /Users/zhaoxuefei/github/unityAndroid/unity/Assets/Plugins/Android/sdklibrary.aar
-cp /Users/zhaoxuefei/github/unityAndroid/LL-TodayStepCounter/sdklibrary/build/outputs/aar/sdklibrary.aar /Users/zhaoxuefei/github/unityAndroid/unity/Assets/Plugins/Android/sdklibrary.aar
