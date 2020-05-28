@@ -13,7 +13,7 @@ public class sdkMainActivity extends UnityPlayerActivity {
     Unity2Android inst;
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        Log.i("unity_with_android_plus", "老子就是自定义的Activity");
+        Log.i("sdkMainActivity", "onCreate");
         inst = new Unity2Android();
 
         inst.callUnity("Main Camera","FromAndroid","zxf:hello");

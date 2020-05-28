@@ -521,3 +521,7 @@ LL-TodayStepCounter/lib-todaystepcounter/build/outputs/aar-R/debug/res/mipmap-xx
 LL-TodayStepCounter/lib-todaystepcounter/build/outputs/aar-R/debug/res/values/values.xml
 LL-TodayStepCounter/lib-todaystepcounter/build/outputs/logs/manifest-merger-debug-report.txt
 LL-TodayStepCounter/lib-todaystepcounter/build/tmp/createRsJarDebug/MANIFEST.MF
+LL-TodayStepCounter/lib-todaystepcounter/build/intermediates/exploded-aar/lib-jlogger/debug/AndroidManifest.xml
+LL-TodayStepCounter/lib-todaystepcounter/build/intermediates/exploded-aar/lib-jlogger/debug/classes.jar
+LL-TodayStepCounter/lib-todaystepcounter/build/intermediates/exploded-aar/lib-jlogger/debug/R.txt
+LL-TodayStepCounter/lib-todaystepcounter/build/intermediates/exploded-aar/lib-jlogger/debug/res/values/values.xml
