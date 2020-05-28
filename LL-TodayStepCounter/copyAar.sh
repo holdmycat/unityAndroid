@@ -1,0 +1,2 @@
+rm -rf /Users/zhaoxuefei/lm/lm3d/demos/TestSteps/UnityTestSteps/Assets/Plugins/Android/sdklibrary.aar
+cp /Users/zhaoxuefei/lm/lm3d/demos/TestSteps/LL-TodayStepCounter/sdklibrary/build/outputs/aar/sdklibrary.aar /Users/zhaoxuefei/Downloads/unity_with_android_plus-master/unity/Assets/Plugins/Android/sdklibrary.aar

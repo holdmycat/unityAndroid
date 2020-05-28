@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LL-TodayStepCounter.iml" filepath="$PROJECT_DIR$/LL-TodayStepCounter.iml" group="LL-TodayStepCounter" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="LL-TodayStepCounter/app" />
+      <module fileurl="file://$PROJECT_DIR$/lib-jlogger/lib-jlogger.iml" filepath="$PROJECT_DIR$/lib-jlogger/lib-jlogger.iml" group="LL-TodayStepCounter/lib-jlogger" />
+      <module fileurl="file://$PROJECT_DIR$/lib-todaystepcounter/lib-todaystepcounter.iml" filepath="$PROJECT_DIR$/lib-todaystepcounter/lib-todaystepcounter.iml" group="LL-TodayStepCounter/lib-todaystepcounter" />
+      <module fileurl="file://$PROJECT_DIR$/sdklibrary/sdklibrary.iml" filepath="$PROJECT_DIR$/sdklibrary/sdklibrary.iml" group="LL-TodayStepCounter/sdklibrary" />
+    </modules>
+  </component>
+</project>

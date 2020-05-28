@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.kezong.fat-aar'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode change.code
+        versionName change.name
+
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "TODAY_STEP_DEBUG", "true"
+        }
+        release {
+            buildConfigField "boolean", "TODAY_STEP_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories{
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    embed (name: 'lib-todaystepcounter', ext: 'aar')
+    compile libraries.supportAppCompat
+//    implementation project(':lib-jlogger')
+//    implementation project(':lib-encrypt')
+
+}
+
+
+//----------------这是一组将module导出为jar的gradle命令-------------------
+// mysdk为自定义的jar包名称
+//task to delete the old jar
+task deleteOldJar(type: Delete) {
+    delete 'release/mysdk.jar'
+}
+
+//task to export contents as jar
+task exportJar(type: Copy) {
+    from('build/intermediates/intermediate-jars/debug/')
+    into('../../UnityTestSteps/Assets/Plugins/Android/bin/')
+    include('classes.jar')
+    ///Rename the jar
+    rename('classes.jar', 'mysdk.jar')
+}
+
+exportJar.dependsOn(deleteOldJar, build)
+//---------------------------命令结束------------------------------
