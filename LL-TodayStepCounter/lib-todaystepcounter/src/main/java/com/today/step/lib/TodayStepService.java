@@ -199,31 +199,31 @@ public class TodayStepService extends Service implements Handler.Callback {
 
     private synchronized void initNotification(int currentStep) {
 
-        nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        int smallIcon = getResources().getIdentifier("icon_step_small", "mipmap", getPackageName());
-        if (0 == smallIcon) {
-            smallIcon = R.mipmap.ic_launcher;
-        }
-        String receiverName = getReceiver(getApplicationContext());
-        PendingIntent contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT);
-        if (!TextUtils.isEmpty(receiverName)) {
-            try {
-                contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(this, Class.forName(receiverName)), PendingIntent.FLAG_UPDATE_CURRENT);
-            } catch (Exception e) {
-                e.printStackTrace();
-                contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-        }
-        String km = getDistanceByStep(currentStep);
-        String calorie = getCalorieByStep(currentStep);
-        String contentText = calorie + " 千卡  " + km + " 公里";
-        int largeIcon = getResources().getIdentifier("ic_launcher", "mipmap", getPackageName());
-        Bitmap largeIconBitmap = null;
-        if (0 != largeIcon) {
-            largeIconBitmap = BitmapFactory.decodeResource(getResources(), largeIcon);
-        } else {
-            largeIconBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-        }
+//        nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//        int smallIcon = getResources().getIdentifier("icon_step_small", "mipmap", getPackageName());
+//        if (0 == smallIcon) {
+//            smallIcon = R.mipmap.ic_launcher;
+//        }
+//        String receiverName = getReceiver(getApplicationContext());
+//        PendingIntent contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT);
+//        if (!TextUtils.isEmpty(receiverName)) {
+//            try {
+//                contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(this, Class.forName(receiverName)), PendingIntent.FLAG_UPDATE_CURRENT);
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                contentIntent = PendingIntent.getBroadcast(this, BROADCAST_REQUEST_CODE, new Intent(), PendingIntent.FLAG_UPDATE_CURRENT);
+//            }
+//        }
+//        String km = getDistanceByStep(currentStep);
+//        String calorie = getCalorieByStep(currentStep);
+//        String contentText = calorie + " 千卡  " + km + " 公里";
+//        int largeIcon = getResources().getIdentifier("ic_launcher", "mipmap", getPackageName());
+//        Bitmap largeIconBitmap = null;
+//        if (0 != largeIcon) {
+//            largeIconBitmap = BitmapFactory.decodeResource(getResources(), largeIcon);
+//        } else {
+//            largeIconBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+//        }
 //        mNotificationApiCompat = new NotificationApiCompat.Builder(this,
 //                nm,
 //                STEP_CHANNEL_ID,
