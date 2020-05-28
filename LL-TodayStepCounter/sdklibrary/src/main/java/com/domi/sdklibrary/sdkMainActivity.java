@@ -1,14 +1,23 @@
 package com.domi.sdklibrary;
 
+import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.unity3d.player.UnityPlayer;
 import com.unity3d.player.UnityPlayerActivity;
-
+import com.domi.sdklibrary.unity.Unity2Android;
 public class sdkMainActivity extends UnityPlayerActivity {
     private static String TAG = "sdkMainActivity";
     private int mStepSum = 0;
+    Unity2Android inst;
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        Log.i("unity_with_android_plus", "老子就是自定义的Activity");
+        inst = new Unity2Android();
+
+        inst.callUnity("Main Camera","FromAndroid","zxf:hello");
+    }
 
     //unity调用Android
     public void UnityCallAndroid () {

@@ -33,6 +33,7 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     embed (name: 'lib-todaystepcounter', ext: 'aar')
+    compileOnly files('tempLibs/classes.jar') //使用compileOnly指定该jar只是开发时引用，编译时不导出
     compile libraries.supportAppCompat
 //    implementation project(':lib-jlogger')
 //    implementation project(':lib-encrypt')
